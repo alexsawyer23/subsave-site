@@ -89,11 +89,64 @@ PRICING_DATA = {
         ],
     },
     "quickbooks": {
-        "cost": 65.00,
+        # QuickBooks Online Essentials plan (new price effective July 1, 2025
+        # costs $75/month according to accounting advisory firm BCS【606224556309300†L94-L104】.
+        "cost": 75.00,
         "currency": "USD",
         "alternatives": [
+            # Wave offers a Starter plan that is free and a Pro plan at $16/month with
+            # additional features such as bank transaction auto‑importing【892198001393548†L74-L83】.
             {"name": "Wave Pro", "cost": 16.00, "currency": "USD",
-             "notes": "Includes OCR and custom branding"},
+             "notes": "Pro plan with bank auto‑import"},
+            # Xero’s entry‑level Ignite plan costs £16 per month【745372906036378†L245-L264】.
+            {"name": "Xero Ignite", "cost": 16.00, "currency": "GBP",
+             "notes": "Ignite plan"},
+        ],
+    },
+    # Trello’s Standard plan costs $6 per user per month when billed monthly【383806120500639†L220-L280】.
+    "trello": {
+        "cost": 6.00,
+        "currency": "USD",
+        "alternatives": [
+            # Freedcamp Pro plan costs $2.49 per user per month when billed monthly【991088617711956†L59-L67】.
+            {"name": "Freedcamp Pro", "cost": 2.49, "currency": "USD",
+             "notes": "Pro plan billed monthly"},
+            # Focalboard is an open‑source self‑hosted alternative with no licensing fees【149631424145758†L130-L140】.
+            {"name": "Focalboard", "cost": 0.00, "currency": "USD",
+             "notes": "Free, self‑hosted"},
+        ],
+    },
+    # Asana’s Starter plan costs $13.49 per user per month when billed monthly【449487890005048†L900-L911】.
+    "asana": {
+        "cost": 13.49,
+        "currency": "USD",
+        "alternatives": [
+            {"name": "Freedcamp Pro", "cost": 2.49, "currency": "USD",
+             "notes": "Pro plan billed monthly"},
+            {"name": "Trello Standard", "cost": 6.00, "currency": "USD",
+             "notes": "Standard plan"},
+        ],
+    },
+    # Freedcamp itself is inexpensive: Pro costs $2.49 per user/month【991088617711956†L59-L67】.
+    "freedcamp": {
+        "cost": 2.49,
+        "currency": "USD",
+        "alternatives": [
+            {"name": "Focalboard", "cost": 0.00, "currency": "USD",
+             "notes": "Free self‑hosted"},
+            {"name": "Trello Standard", "cost": 6.00, "currency": "USD",
+             "notes": "Standard plan"},
+        ],
+    },
+    # Xero’s Grow plan is £33 per month【745372906036378†L245-L264】.
+    "xero": {
+        "cost": 33.00,
+        "currency": "GBP",
+        "alternatives": [
+            {"name": "Wave Pro", "cost": 16.00, "currency": "USD",
+             "notes": "Pro plan"},
+            {"name": "QuickBooks Essentials", "cost": 75.00, "currency": "USD",
+             "notes": "Updated 2025 price"},
         ],
     },
     # Additional tools can be added here
