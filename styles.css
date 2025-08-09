@@ -6,11 +6,11 @@
 
 /* CSS Variables */
 :root {
-    --primary: #2563eb;
-    --secondary: #059669;
-    --dark: #1f2937;
-    --light: #f9fafb;
-    --neutral: #e5e7eb;
+    --primary: #2563eb;      /* royal blue for buttons and highlights */
+    --secondary: #059669;    /* emerald green for secondary buttons */
+    --dark: #1f2937;         /* dark navy for text */
+    --light: #f9fafb;        /* very light background */
+    --neutral: #e5e7eb;      /* light grey for borders */
     --max-width: 1100px;
 }
 
@@ -39,7 +39,9 @@ img {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background-image: url('assets/hero.png');
+    background-size: cover;
+    background-position: center;
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -80,7 +82,7 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: #1e4abb; /* darken primary manually */
+    background-color: darken(var(--primary), 10%);
 }
 
 .btn-secondary {
@@ -89,7 +91,7 @@ img {
 }
 
 .btn-secondary:hover {
-    background-color: #047857; /* darken secondary manually */
+    background-color: darken(var(--secondary), 10%);
 }
 
 /* Container */
@@ -212,6 +214,48 @@ section h2 {
 .cta .note {
     font-size: 0.85rem;
     opacity: 0.8;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+}
+
+.form-group label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--dark);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+form button {
+    align-self: center;
+    margin-top: 0.5rem;
 }
 
 /* Footer */

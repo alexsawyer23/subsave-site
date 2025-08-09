@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubSave – Subscription Cost Audit & Optimization</title>
+    <title>SubSave – Subscription Cost Audit &amp; Optimization</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Basic SEO and social tags -->
     <meta name="description" content="SubSave helps small teams cut SaaS costs by auditing your subscriptions, finding redundancies and hidden fees, and delivering actionable savings recommendations.">
     <meta property="og:title" content="SubSave – Cut Your SaaS Costs">
     <meta property="og:description" content="Stop wasting money on unused subscriptions. Get a free audit today and start saving.">
+    <meta property="og:image" content="assets/hero.png">
 </head>
 <body>
     <!-- Header / Hero Section -->
@@ -41,11 +42,11 @@
                         <p>Fill in a simple form with the subscriptions you’re currently paying for. We’ll ask for names, prices, renewal dates and any notes.</p>
                     </div>
                     <div class="step">
-                        <h3>2. We audit & analyse</h3>
+                        <h3>2. We audit &amp; analyse</h3>
                         <p>Our AI‑assisted audit groups similar tools, flags duplicates and calculates potential savings. A human expert reviews every report to ensure accuracy.</p>
                     </div>
                     <div class="step">
-                        <h3>3. Save & streamline</h3>
+                        <h3>3. Save &amp; streamline</h3>
                         <p>You’ll receive a clear report showing total spend, redundant tools and recommendations. We’ll remind you of upcoming renewals and offer follow‑up audits.</p>
                     </div>
                 </div>
@@ -91,9 +92,25 @@
             <div class="container">
                 <h2>Ready to stop overspending?</h2>
                 <p>Enter your subscriptions into our intake form and we’ll send you a free audit. It only takes a few minutes.</p>
-                <!-- Placeholder for external form link -->
-                <p><a href="#" class="btn btn-primary">Open Intake Form</a></p>
-                <p class="note">Note: Replace this link with your own form (e.g., Google Form or Formspree) to collect subscription details.</p>
+                <!-- Subscription intake form -->
+                <form action="https://formsubmit.co/alexsawyer23@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="SubSave Audit Request" />
+                    <!-- After submission redirect to thank-you page -->
+                    <input type="hidden" name="_next" value="https://alexsawyer23.github.io/subsave-site/thank-you.html" />
+                    <div class="form-group">
+                        <label for="subscriptions">Subscription Names (comma‑separated)</label>
+                        <textarea id="subscriptions" name="subscriptions" required placeholder="e.g., Slack, Adobe Creative Cloud"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="spend">Approximate monthly spend (£)</label>
+                        <input type="number" id="spend" name="spend" step="0.01" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional details or goals (optional)</label>
+                        <textarea id="message" name="message" placeholder="Any specifics you want us to know"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </section>
     </main>
